@@ -1,0 +1,877 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+/*header*/
+
+.header{
+    padding: 0.8vw 0;
+}
+
+.interno{
+    max-width: 1600px;
+    padding: 0 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .interno .esquerda{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+}
+
+.header .logo img{
+    width: 160px;
+}
+
+.header .menu{
+    margin: 0 4vw;
+}
+
+.header .menu ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.header .menu ul li{
+    padding: 0 1vw;
+}
+
+.header .menu ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #a1a1a1;
+    font-weight: 700;
+}
+
+.header .interno .direita{
+    width: 20vw;
+    display: flex;
+    justify-content: end;
+}
+
+.header .buttons{
+    display: flex;
+    
+}
+
+.header .buttons button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.header .buttons button:nth-child(1){
+    margin-right: 20px;
+    color: #5412A4;
+    
+}
+
+.header .buttons button:nth-child(2){
+    border: 0.5px solid #47474721;
+    padding: 3px 15px;
+    border-radius: 3px;
+    color: #0971E6;
+}
+
+.header .buttons button img{
+    width: 10px;
+    margin-right: 5px;
+}
+
+.header .sidebar{
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    transition: all .5s ease;
+    border-left: 0.5px solid #ccc;
+    padding: 0 20px;
+}
+
+.header .sidebar ul{
+    list-style-type: none;
+    margin-top: 80px;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #000;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: .4s;
+    text-decoration: none;
+    color: #5412A4;
+
+    
+}
+
+.sidebar ul li:hover a{
+    padding-right: 50px;
+}
+
+.header .sidebar ul button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 20px;
+    color: #5412A4;
+    margin-top: 100px;
+}
+
+.header .sidebar .dois{
+    border: 0.5px solid #47474721;
+    padding: 3px 15px;
+    border-radius: 3px;
+    color: #0971E6;
+}
+
+.header .sidebar button img{
+    width: 10px;
+    margin-right: 5px;
+}
+
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background-color: #5412A4;
+    border-radius: 3px;
+    display: none;
+}
+
+label #btn{
+    right: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 999;
+    right: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~.sidebar{
+    right: 0;
+}
+
+#check:checked ~label #btn{
+    right: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~label #cancel{
+    right: 20px;
+}
+
+#header2{
+    padding: 0.8vw 0;
+    background-color: #fff; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -100px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    border-bottom: 0.5px solid #cccccc9c;
+}
+
+#header2 .interno .esquerda{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+}
+
+#header2 .logo img{
+    width: 160px;
+}
+
+#header2 .menu{
+    margin: 0 4vw;
+}
+
+#header2 .menu ul{
+    display: flex;
+    list-style-type: none;
+}
+
+#header2 .menu ul li{
+    padding: 0 1vw;
+}
+
+#header2 .menu ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #a1a1a1;
+    font-weight: 700;
+}
+
+#header2 .interno .direita{
+    width: 20vw;
+    display: flex;
+    justify-content: end;
+}
+
+#header2 .buttons{
+    display: flex;
+    
+}
+
+#header2 .buttons button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#header2 .buttons button:nth-child(1){
+    margin-right: 20px;
+    color: #5412A4;
+    font-weight: 700;
+}
+
+#header2 .buttons button:nth-child(2){
+    border: 0.5px solid #47474721;
+    padding: 3px 15px;
+    border-radius: 3px;
+    color: #0971E6;
+    font-weight: 700;
+}
+
+#header2 .buttons button img{
+    width: 10px;
+    margin-right: 5px;
+}
+
+/*banner*/
+
+.banner{
+    background-image: url(../img/img-banner-teste-programador.png);
+    background-position: right top;
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+
+.banner .esquerda{
+    width: 40vw;
+    padding: 0 0 10vw 0;
+}
+
+.banner .esquerda h1{
+    font-size: 5vw;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #5412A4;
+}
+
+.banner .esquerda p{
+    font-size: 1.57vw;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #888888;
+}
+
+.banner .esquerda button{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    flex: 1 1 auto;
+    transition: 0.5s;
+    background-size: 200% auto;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(to right, #0143ad 0%, #68c1eb 51%, #d0e2ff 100%);
+}
+
+.banner .esquerda button:hover{
+    background-position: right center;    
+}
+
+.banner .esquerda button:focus{
+    outline: none;
+}
+
+.banner .direita{
+    width: 67%;
+}
+
+/*get started*/
+
+.get-started{
+    padding-top: 6vw;
+}
+
+.get-started .titulo{
+    width: 22vw;
+    margin: 0 auto;
+}
+
+.get-started .titulo img{
+    width: 8vw;
+    height: 0.7vw;
+    margin-bottom: 2vw;
+}
+
+.get-started .titulo h2{
+    font-size: 2.355vw;
+    color: #5412A4;
+}
+
+.get-started .steps{
+    display: flex;
+    justify-content: space-between;
+    margin: 8vw 0;
+}
+
+.get-started .steps .create{
+    text-align: center;
+    width: 25%;
+    padding: 5px 2vw;
+    cursor: pointer;
+}
+
+.get-started .steps .create:hover{
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.038);
+    -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.038);
+    box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.038);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.get-started .steps .create img{
+    width: 14vw;
+}
+
+.get-started .steps .create h3{
+    width: 8vw;
+    margin: 0 auto;
+    color: #5412A4;
+    font-size: 1.2vw;
+    margin-bottom: 20px;
+}
+
+.get-started .steps .create p{
+    color: #727272;
+    font-size: 1vw;
+}
+
+/*learn*/
+
+.learn{
+    background-image: url('../img/img-fundo-teste-programador.png');
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 36vw;
+
+}
+
+.learn .interno{
+    display: flex;
+    align-items: center;
+    height: 45vw;
+}
+
+.learn .esquerda{
+    width: 35vw;
+}
+
+.learn .direita{
+    width: 65vw;
+}
+
+.learn .direita img{
+    width: 8vw;
+    height: 0.7vw;
+    margin-bottom: 2vw;
+}
+
+.learn .direita p{
+    font-size: 2vw;
+    font-weight: 400;
+    color: #727272;
+    margin-bottom: 20px;
+}
+
+.learn .direita a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #0971E6;
+}
+
+/*safety*/
+
+.safety{
+    margin-top: -10vw;
+    background-position: right top;
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    margin-bottom: 6vw;
+    background-image: url('../img/img-fundo-2-teste-programador.png');
+}
+
+.safety .interno{
+    display: flex;
+    align-items: end;
+    height: 50vw;
+}
+
+.safety .esquerda{
+    width: 58vw;
+}
+
+.safety .esquerda img{
+    width: 8vw;
+    height: 0.7vw;
+    margin-bottom: 2vw;
+}
+
+.safety .esquerda h2{
+    font-size: 2.3vw;
+    margin-bottom: 5vw;
+    width: 21vw;
+    color: #5412A4;
+}
+
+.safety .esquerda p{
+    font-size: 2vw;
+    font-weight: 400;
+    color: #727272;
+    margin-bottom: 20px;
+}
+
+.safety .esquerda .bloco{
+    margin-bottom: -2vw;
+}
+
+.safety .esquerda a{
+    color: #0971E6;
+    text-decoration: none;
+}
+
+.safety .direita{
+    width: 25vw;
+}
+
+/*download*/
+
+.download{
+    background-position: center;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-image: url('../img/img-fundo-4-teste-programador.png');
+}
+
+.download .interno{
+    height: 60vw;
+    display: flex;
+    align-items: center;
+}
+
+.download .esquerda{
+    width: 35vw;
+}
+
+.download .direita{
+    width: 50vw;
+}
+
+.download .direita img{
+    width: 8vw;
+    height: 0.7vw;
+    margin-bottom: 2vw;
+}
+
+.download .direita h2{
+    font-size: 2.3vw;
+    margin-bottom: 2vw;
+    color: #5412A4;
+}
+
+.download .direita .buttons img{
+    width: 10vw;
+    height: 3vw;
+    cursor: pointer;
+}
+
+.download .direita .buttons img:nth-child(1){
+    margin-right: 20px;
+}
+
+/*register*/
+
+.register .interno{
+    display: flex;
+    justify-content: space-around;
+    padding: 4vw 0;
+}
+
+.register .interno .esquerda .up{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vw;
+}
+
+.register .interno .direita .up{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4vw;
+}
+
+.register .interno .up h2{
+    font-size: 2.5vw;
+    color: #5412A4;
+    margin-right: 6vw;
+}
+
+.register .interno .up img{
+    width: 4vw;
+}
+
+.register .interno .down img{
+    width: 8vw;
+    height: 0.7vw;
+    margin-bottom: 2vw;
+}
+
+/*footer*/
+
+footer{
+    background-image: url('../img/fundo-footer-teste-programador.png.jpg');
+    color: white;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    padding-top: 5vw;
+    background-color: #5711A5;
+}
+
+footer .interno{
+    display: block;
+}
+
+footer .up{
+    display: flex;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.292);
+    padding: 2vw 0;
+    margin-bottom: 2vw;
+}
+
+footer .up .esquerda label{
+    font-size: 20px;
+}
+
+footer .esquerda{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .esquerda img{
+    width: 6vw;
+    margin-bottom: 1vw;
+}
+
+footer .direita{
+    width: 50%;
+    display: flex;
+}
+
+footer .down{
+    display: flex;
+}
+
+footer .direita .esquerda{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .direita .direita2{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .direita .icones{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .direita .icones i{
+    margin-left: 10px;
+}
+
+footer .down .esquerda p{
+    font-size: 1vw;
+}
+
+footer .down .direita{
+    display: flex;
+    justify-content: end;
+}
+
+footer .down .direita i{
+    font-size: 1vw;
+}
+
+footer h3{
+    margin-bottom: 1.5vw;
+    font-size: 1.5vw;
+}
+footer a{
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+footer .down{
+    padding-bottom: 2vw;
+}
+
+@media screen and (max-width: 900px) {
+    /*header*/
+    .interno{
+        padding: 0 5vw;
+    }
+
+    .header .interno .esquerda{
+        width: 60vw;
+    }
+
+    .header .logo img{
+        width: 17vw;
+    }
+    
+    .header .menu ul li a{
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 10px;
+        color: #a1a1a1;
+        font-weight: 700;
+    }
+
+    .header .buttons button:nth-child(1){
+        margin-right: 1.5vw;
+    }
+
+    .header .interno .direita{
+        width: 40vw;
+    }
+
+    label #btn, label #cancel{
+        display: block;
+    }
+
+    #header2 .interno .esquerda{
+        width: 60vw;
+    }
+
+    #header2 .logo img{
+        width: 17vw;
+    }
+
+    #header2 .menu ul li a{
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 10px;
+        color: #a1a1a1;
+        font-weight: 700;
+    }
+    
+    #header2 .buttons button:nth-child(1){
+        margin-right: 1.5vw;
+    }
+
+    #header2 .interno .direita{
+        width: 40vw;
+    }
+    /*banner*/
+
+    .banner .esquerda{
+        width: 39vw;
+        padding: 0 0 10vw 0;
+    }
+
+    .banner .esquerda button{
+        font-size: 10px;
+    }
+
+    /*get-started*/   
+    .get-started .titulo{
+        width: 28vw;
+    }
+    
+    .get-started .titulo img{
+        width: 10vw;
+        height: 1vw;
+        margin-bottom: 2.5vw;
+    }
+    
+    .get-started .titulo h2{
+        font-size: 2.99vw;
+        color: #5412A4;
+    }
+    
+    .get-started .steps{
+        flex-wrap: wrap;
+        margin: 8vw 0;
+    }
+    
+    .get-started .steps .create{
+        width: 50%;
+        padding: 0 10vw;
+        padding-bottom: 40px;
+    }
+
+    
+    
+    .get-started .steps .create img{
+        width: 25vw;
+    }
+    
+    .get-started .steps .create h3{
+        width: 12vw;
+        margin: 0 auto;
+        color: #5412A4;
+        font-size: 1.8vw;
+        margin-bottom: 20px;
+    }
+    
+    .get-started .steps .create p{
+        color: #727272;
+        font-size: 1.5vw;
+    }
+
+    /*footer*/
+
+    footer .esquerda img{
+        width: 18vw;
+        margin-bottom: 1vw;
+    }
+
+    footer h3{
+        margin-bottom: 2vw;
+        font-size: 2vw;
+    }
+    footer a{
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+
+    footer .down .esquerda p{
+        font-size: 1.5vw;
+    }
+
+    footer .down .direita i{
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    html, body{
+        overflow-x: hidden;
+    }
+
+    /*header*/
+    .header .logo img{
+        width: 80px;
+    }
+
+    .header .menu{
+        display: none;
+    }
+
+    .header .buttons{
+        display: none;
+    }
+
+    #header2 .logo img{
+        width: 80px;
+    }
+
+    #header2 .menu{
+        display: none;
+    }
+
+    #header2 .buttons{
+        display: none;
+    }
+
+    /*banner*/
+    .banner{
+        background-size: 55vw;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .banner .esquerda{
+        width: 100vw;
+        padding: 0 0 10vw 0;
+    }
+
+
+    .banner .esquerda h1{
+        font-size: 6vw;
+        margin-bottom: 10px;
+    }
+
+    /*get started*/
+    .get-started .steps .create{
+        width: 100%;
+        padding: 0 25vw;
+        padding-bottom: 40px;
+    }
+
+    .get-started .steps .create img{
+        width: 35vw;
+    }
+    
+    .get-started .steps .create h3{
+        width: 15vw;
+        font-size: 2.3vw;
+    }
+    
+    .get-started .steps .create p{
+        color: #727272;
+        font-size: 2vw;
+    }
+
+    /*learn*/
+
+    
+}
