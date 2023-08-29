@@ -728,12 +728,17 @@ footer .down{
     }
 
     .banner .esquerda button{
-        font-size: 10px;
+        font-size: 14px;
+    }
+
+    .banner .esquerda button{
+        padding: 10px 80px;
+        
     }
 
     /*get-started*/   
     .get-started .titulo{
-        width: 28vw;
+        width: 47vw;
     }
     
     .get-started .titulo img{
@@ -743,7 +748,7 @@ footer .down{
     }
     
     .get-started .titulo h2{
-        font-size: 2.99vw;
+        font-size: 5vw;
         color: #5412A4;
     }
     
@@ -809,7 +814,8 @@ footer .down{
 
     /*header*/
     .header .logo img{
-        width: 80px;
+        width: 120px;
+        margin-top: 20px;
     }
 
     .header .menu{
@@ -817,6 +823,10 @@ footer .down{
     }
 
     .header .buttons{
+        display: none;
+    }
+
+    #header2{
         display: none;
     }
 
@@ -834,9 +844,12 @@ footer .down{
 
     /*banner*/
     .banner{
-        background-size: 55vw;
+        background-size: 100vh;
         padding-top: 20px;
         padding-bottom: 50px;
+        height: 100vh;
+        display: flex;
+
     }
 
     .banner .esquerda{
@@ -846,32 +859,134 @@ footer .down{
 
 
     .banner .esquerda h1{
-        font-size: 6vw;
+        font-size: 10vw;
         margin-bottom: 10px;
+        font-weight: 700;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: #ffffff4b;
+    }
+
+    .banner .esquerda p{
+        font-size: 3vw;
+        margin-bottom: 30px;
+        font-weight: 600;
+        color: #1a1a1a;
+        background-color: #ffffff57;
+        border-radius: 10px;
+        padding: 10px;
     }
 
     /*get started*/
     .get-started .steps .create{
-        width: 100%;
-        padding: 0 25vw;
+        width: 80%;
+        padding: 0 0;
         padding-bottom: 40px;
+        margin: 0 auto;
+    }
+
+    .get-started .titulo{
+        width: 56.3vw;
+    }
+
+    .get-started .titulo h2{
+        font-size: 6vw;
     }
 
     .get-started .steps .create img{
-        width: 35vw;
+        width: 45vw;
+        margin: 0 auto;
     }
     
     .get-started .steps .create h3{
-        width: 15vw;
-        font-size: 2.3vw;
+        width: 35vw;
+        font-size: 5vw;
     }
     
     .get-started .steps .create p{
         color: #727272;
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     /*learn*/
 
-    
+    .learn{
+        height: 100vh;
+        background-size: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .learn .esquerda{
+        display: none;
+    }
+
+    .learn .direita{
+        width: 100%;
+    }
+
+    .learn .direita p{
+        font-size: 3.5vw;
+        color: #242424;
+    }
+
+    /*safety*/
+
+    .safety{
+        height: 100vh;
+        background-size: 60vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .safety .esquerda{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .safety .esquerda h2{
+        width: 56.3vw;
+        font-size: 6vw;
+    }
+
+    .safety .esquerda p{
+        font-size: 3vw;
+        width: 100%;
+        color: #000;
+        background-color: #ffffff28;
+    }
+
+    .safety .esquerda a{
+        background-color: #ffffff49;
+    } 
+
+    .safety .direita{
+        display: none;
+    }
+
+    /*download*/
+
+    .download .esquerda{
+        display: none;
+    }
+
+    .download .direita{
+        width: 100%;
+        text-align: right;
+    }
+
+    .download .direita img{
+    }
+
+    .download .direita h2{
+        font-size: 4vw;
+        width: 100%;
+        text-align: right;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: #ffffff81;
+    }
+
+    .download .direita .buttons{
+        justify-content: end;
+        display: flex;
+    }
 }
