@@ -166,7 +166,7 @@ label #btn, label #cancel{
 label #btn{
     right: 40px;
     top: 25px;
-    font-size: 35px;
+    font-size: 25px;
     color: white;
     padding: 6px 12px;
     transition: all .5s;
@@ -693,10 +693,6 @@ footer .down{
         width: 40vw;
     }
 
-    label #btn, label #cancel{
-        display: block;
-    }
-
     #header2 .interno .esquerda{
         width: 60vw;
     }
@@ -826,6 +822,10 @@ footer .down{
         display: none;
     }
 
+    label #btn, label #cancel{
+        display: block;
+    }
+
     #header2{
         display: none;
     }
@@ -952,11 +952,11 @@ footer .down{
         font-size: 3vw;
         width: 100%;
         color: #000;
-        background-color: #ffffff28;
+        background-color: #ffffff81;
     }
 
     .safety .esquerda a{
-        background-color: #ffffff49;
+        background-color: #ffffff81;
     } 
 
     .safety .direita{
@@ -978,7 +978,7 @@ footer .down{
     }
 
     .download .direita h2{
-        font-size: 4vw;
+        font-size: 5vw;
         width: 100%;
         text-align: right;
         -webkit-text-stroke-width: 0.5px;
@@ -988,5 +988,10 @@ footer .down{
     .download .direita .buttons{
         justify-content: end;
         display: flex;
+    }
+
+    .download .direita .buttons img{
+        width: 20vw;
+        height: 6vw;
     }
 }
