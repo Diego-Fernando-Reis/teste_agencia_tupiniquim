@@ -54,6 +54,10 @@ html, body{
     font-weight: 700;
 }
 
+.header .menu ul li a:hover{
+    color: #0971E6
+}
+
 .header .interno .direita{
     width: 20vw;
     display: flex;
@@ -79,11 +83,22 @@ html, body{
     
 }
 
+.header .buttons button:nth-child(1):hover{
+    color: #0971E6
+}
+
 .header .buttons button:nth-child(2){
     border: 0.5px solid #47474721;
     padding: 3px 15px;
     border-radius: 3px;
     color: #0971E6;
+}
+
+.header .buttons button:nth-child(2):hover{
+    border: 0.5px solid #0971E6;
+    background-color: #0971E6;
+    color: white;
+    transition: .5s;
 }
 
 .header .buttons button img{
@@ -237,6 +252,10 @@ label #cancel{
     font-weight: 700;
 }
 
+#header2 .menu ul li a:hover{
+    color: #0971E6
+}
+
 #header2 .interno .direita{
     width: 20vw;
     display: flex;
@@ -259,7 +278,11 @@ label #cancel{
 #header2 .buttons button:nth-child(1){
     margin-right: 20px;
     color: #5412A4;
-    font-weight: 700;
+    
+}
+
+#header2 .buttons button:nth-child(1):hover{
+    color: #0971E6
 }
 
 #header2 .buttons button:nth-child(2){
@@ -267,7 +290,13 @@ label #cancel{
     padding: 3px 15px;
     border-radius: 3px;
     color: #0971E6;
-    font-weight: 700;
+}
+
+#header2 .buttons button:nth-child(2):hover{
+    border: 0.5px solid #0971E6;
+    background-color: #0971E6;
+    color: white;
+    transition: .5s;
 }
 
 #header2 .buttons button img{
@@ -596,6 +625,12 @@ footer .up{
 
 footer .up .esquerda label{
     font-size: 20px;
+}
+
+footer .up i{
+    font-size: 25px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 footer .esquerda{
